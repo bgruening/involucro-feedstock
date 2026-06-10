@@ -8,7 +8,7 @@ export GO111MODULE=on
 cd "$( go env GOPATH )"/src/github.com/involucro/involucro
 
 go build \
-  -o $PREFIX/bin/involucro \
+  -o "${PREFIX}/bin/involucro" \
   -ldflags="-s -X github.com/involucro/involucro/app.version=${PKG_VERSION}" \
   ./cmd/involucro
 
